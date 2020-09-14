@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">AndroidTestApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="button_setName_cta">Set name</string>
+    <string name="hint_setName">Enter your name</string>
+
+    <string name="label_fragmentFour">Fragment four</string>
+
+    <string name="menu_homeItem">Home</string>
+    <string name="menu_groupItem">Group</string>
+    <string name="menu_musicItem">Music</string>
+
 </resources>
