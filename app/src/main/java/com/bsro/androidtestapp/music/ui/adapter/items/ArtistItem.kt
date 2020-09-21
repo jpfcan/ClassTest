@@ -1,4 +1,4 @@
-package com.bsro.androidtestapp.ui.music.adapter.items
+package com.bsro.androidtestapp.music.ui.adapter.items
 
 import com.bsro.androidtestapp.R
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder

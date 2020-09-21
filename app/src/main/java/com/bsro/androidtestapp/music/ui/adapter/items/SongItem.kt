@@ -1,7 +1,7 @@
-package com.bsro.androidtestapp.ui.music.adapter.items
+package com.bsro.androidtestapp.music.ui.adapter.items
 
 import com.bsro.androidtestapp.R
-import com.bsro.androidtestapp.data.Song
+import com.bsro.domain.music.model.Song
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
 import com.xwray.groupie.kotlinandroidextensions.Item
 import kotlinx.android.synthetic.main.list_item_song.view.*

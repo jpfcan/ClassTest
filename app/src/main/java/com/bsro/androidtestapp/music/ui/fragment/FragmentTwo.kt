@@ -1,30 +1,31 @@
-package com.bsro.androidtestapp.ui.music.fragment
+package com.bsro.androidtestapp.music.ui.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager.VERTICAL
 import com.bsro.androidtestapp.R
-import com.bsro.androidtestapp.data.Song
-import com.bsro.androidtestapp.ui.music.SongsViewModel
-import com.bsro.androidtestapp.ui.music.adapter.SongsAdapter
-import com.bsro.androidtestapp.ui.music.adapter.items.ArtistItem
-import com.bsro.androidtestapp.ui.music.adapter.items.SongItem
+import com.bsro.androidtestapp.music.ui.SongsViewModel
+import com.bsro.androidtestapp.music.ui.adapter.items.SongItem
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.kotlinandroidextensions.GroupieViewHolder
+import dagger.android.support.DaggerFragment
 import kotlinx.android.synthetic.main.fragment_two.*
+import javax.inject.Inject
 
-class FragmentTwo : Fragment() {
+class FragmentTwo : DaggerFragment() {
+
+    @Inject lateinit var testString: String
+
+    @Inject lateinit var viewModel: SongsViewModel
 
     val songsAdapter = GroupAdapter<GroupieViewHolder>()
-    val viewModel: SongsViewModel by viewModels()
+    //val viewModel: SongsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,6 +46,8 @@ class FragmentTwo : Fragment() {
 
         recyclerViewSongs.layoutManager = LinearLayoutManager(context, VERTICAL, false)
         recyclerViewSongs.adapter = songsAdapter
+
+        textViewTitle.text = testString
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {

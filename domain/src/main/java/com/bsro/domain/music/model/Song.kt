@@ -1,4 +1,4 @@
-package com.bsro.androidtestapp.data
+package com.bsro.domain.music.model
 
 data class Song(
     val id: String,

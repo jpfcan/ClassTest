@@ -1,11 +1,11 @@
-package com.bsro.androidtestapp.ui.music.adapter
+package com.bsro.androidtestapp.music.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bsro.androidtestapp.R
-import com.bsro.androidtestapp.data.Song
+import com.bsro.domain.music.model.Song
 import kotlinx.android.synthetic.main.list_item_song.view.*
 
 class SongsAdapter(val items: List<Song>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {

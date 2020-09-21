@@ -3,14 +3,13 @@ package com.bsro.androidtestapp.ui.activities
 import android.os.Bundle
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.bsro.androidtestapp.R
-import com.bsro.androidtestapp.ui.view_models.TestVM
-import dagger.android.support.DaggerAppCompatActivity
 import kotlinx.android.synthetic.main.activity_second.*
 
-class SecondActivity : DaggerAppCompatActivity() {
+class SecondActivity : AppCompatActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
