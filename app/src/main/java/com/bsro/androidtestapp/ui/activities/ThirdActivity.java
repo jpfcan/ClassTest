@@ -1,4 +1,4 @@
-package com.bsro.androidtestapp.activities;
+package com.bsro.androidtestapp.ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,7 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import com.bsro.androidtestapp.R;
-import com.bsro.androidtestapp.fragments.FragmentOne;
+import com.bsro.androidtestapp.ui.fragments.FragmentOne;
 
 public class ThirdActivity extends AppCompatActivity {
 

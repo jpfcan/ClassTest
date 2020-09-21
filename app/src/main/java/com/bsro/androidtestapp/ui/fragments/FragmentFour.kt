@@ -1,4 +1,4 @@
-package layout
+package com.bsro.androidtestapp.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,16 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.bsro.androidtestapp.R
-import com.bsro.androidtestapp.fragments.FragmentTwo
 
-class FragmentThree: Fragment() {
+class FragmentFour : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_three, container, false)
-    }
+    ): View? = inflater.inflate(R.layout.fragment_three, container, false)
     
 }

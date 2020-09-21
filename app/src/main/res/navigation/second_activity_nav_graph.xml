@@ -2,23 +2,41 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/second_activity_nav_graph"
-    app:startDestination="@id/fragment_one">
+    app:startDestination="@id/home">
 
     <fragment
-        android:id="@+id/fragment_one"
-        android:name="com.bsro.androidtestapp.fragments.FragmentOne"
-        android:label="Fragment One" >
+        android:id="@+id/home"
+        android:name="com.bsro.androidtestapp.ui.music.fragment.FragmentTwo"
+        android:label="Fragment two" >
 
         <action
-            android:id="@+id/action_fragment_one_to_fragment_two"
-            app:destination="@id/fragment_two" />
+            android:id="@+id/action_home_to_fragmentOne"
+            app:destination="@id/fragmentOne" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/fragment_two"
-        android:name="com.bsro.androidtestapp.fragments.FragmentTwo"
-        android:label="Fragment two" />
+        android:id="@+id/fragmentOne"
+        android:name="com.bsro.androidtestapp.ui.fragments.FragmentOne"
+        android:label="Fragment One">
+
+        <argument
+            android:name="userId"
+            app:argType="string"
+            android:defaultValue=""
+            app:nullable="false"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/group"
+        android:name="com.bsro.androidtestapp.ui.fragments.FragmentFour"
+        android:label="@string/label_fragmentFour"/>
+
+    <fragment
+        android:id="@+id/music"
+        android:name="layout.FragmentThree"
+        android:label="@string/label_fragmentFour"/>
 
 </navigation>
 
