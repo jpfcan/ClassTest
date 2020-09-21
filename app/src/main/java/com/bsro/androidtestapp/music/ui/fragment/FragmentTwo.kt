@@ -25,7 +25,6 @@ class FragmentTwo : DaggerFragment() {
     @Inject lateinit var viewModel: SongsViewModel
 
     val songsAdapter = GroupAdapter<GroupieViewHolder>()
-    //val viewModel: SongsViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -38,10 +37,8 @@ class FragmentTwo : DaggerFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         buttonSetName.setOnClickListener {
-            val args = Bundle().apply {
-                putString("userId", editTextName.text.toString())
-            }
-            findNavController().navigate(R.id.action_home_to_fragmentOne, args)
+            val name = editTextName.text.toString()
+            findNavController().navigate(FragmentTwoDirections.actionHomeToFragmentOne(name))
         }
 
         recyclerViewSongs.layoutManager = LinearLayoutManager(context, VERTICAL, false)

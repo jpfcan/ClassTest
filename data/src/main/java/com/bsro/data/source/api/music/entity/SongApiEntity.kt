@@ -12,6 +12,6 @@ data class SongApiEntity(
 
 
 fun SongApiEntity.mapToDomain() =
-    Song(id, name, artist, genre, rating)
+    Song(id, name, artist, genre)
 
 fun List<SongApiEntity>.mapToDomain() = map { it.mapToDomain() }

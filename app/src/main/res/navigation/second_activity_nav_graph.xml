@@ -23,7 +23,6 @@
         <argument
             android:name="userId"
             app:argType="string"
-            android:defaultValue=""
             app:nullable="false"/>
 
     </fragment>

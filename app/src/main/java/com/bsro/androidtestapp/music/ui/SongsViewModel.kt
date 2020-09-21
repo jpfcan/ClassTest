@@ -11,22 +11,23 @@ import javax.inject.Inject
 
 class SongsViewModel
 @Inject constructor(
-    private val getSongsUseCase: GetSongsUseCase
+    getSongsUseCase: GetSongsUseCase
 ) : BaseViewModel() {
 
     private val songsLiveData = MutableLiveData<List<Song>>()
+    private val songsErrorLiveData = MutableLiveData<Unit>()
 
     init {
         compositeDisposable.add(
             getSongsUseCase.execute()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeWith(object : DisposableSingleObserver<List<Song>>() {
-                    override fun onSuccess(t: List<Song>?) {
+                    override fun onSuccess(t: List<Song>) {
                         songsLiveData.value = t
                     }
 
                     override fun onError(e: Throwable?) {
-                        //TODO("Not yet implemented")
+                        songsErrorLiveData.value = Unit
                     }
                 })
         )
