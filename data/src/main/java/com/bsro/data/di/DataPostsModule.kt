@@ -14,6 +14,6 @@ class DataPostsModule {
     @Provides
     internal fun providePostsRepository(
         postsApiClient: PostsApiClient
-    ): PostsRepository = PostsRepositoryImpl(postsApiClient)
+    ) = PostsRepositoryImpl(postsApiClient)
 
 }

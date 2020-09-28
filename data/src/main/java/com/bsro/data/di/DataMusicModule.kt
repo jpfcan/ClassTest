@@ -14,6 +14,6 @@ class DataMusicModule {
     @Provides
     internal fun provideMusicRepository(
         musicApiClient: MusicApiClient
-    ): MusicRepository = MusicRepositoryImpl(musicApiClient)
+    ) = MusicRepositoryImpl(musicApiClient)
 
 }

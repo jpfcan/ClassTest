@@ -21,7 +21,7 @@ class SongsAdapter(val items: List<Song>): RecyclerView.Adapter<RecyclerView.Vie
             textViewSongTitle.text = song.name
             textViewArtist.text = song.artist
             textViewGenre.text = song.genre
-            seekBarRating.progress = song.rating - 1
+            seekBarRating.progress = 3//song.rating - 1
         }
     }
 
