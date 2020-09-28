@@ -1,4 +1,4 @@
-package com.bsro.data.repository
+package com.bsro.data.repository.music
 
 import com.bsro.data.source.api.music.client.MusicApiClient
 import com.bsro.data.source.api.music.entity.mapToDomain
