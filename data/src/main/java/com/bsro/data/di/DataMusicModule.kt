@@ -1,6 +1,6 @@
 package com.bsro.data.di
 
-import com.bsro.data.repository.MusicRepositoryImpl
+import com.bsro.data.repository.music.MusicRepositoryImpl
 import com.bsro.data.source.api.music.client.MusicApiClient
 import com.bsro.domain.music.repository.MusicRepository
 import dagger.Module
@@ -14,6 +14,6 @@ class DataMusicModule {
     @Provides
     internal fun provideMusicRepository(
         musicApiClient: MusicApiClient
-    ): MusicRepository = MusicRepositoryImpl(musicApiClient)
+    ) = MusicRepositoryImpl(musicApiClient)
 
 }

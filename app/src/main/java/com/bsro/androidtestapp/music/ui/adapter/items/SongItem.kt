@@ -13,7 +13,7 @@ class SongItem(val song: Song): Item() {
             textViewSongTitle.text = song.name
             textViewArtist.text = song.artist
             textViewGenre.text = song.genre
-            seekBarRating.progress = song.rating - 1
+            seekBarRating.progress = 3//song.rating - 1
 
             setOnClickListener {
                 //TODO Add action
